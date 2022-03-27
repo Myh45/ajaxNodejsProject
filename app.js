@@ -1,6 +1,6 @@
 const button = document.querySelector('#button');
 const usersContainer = document.querySelector('.users-container');
-const url = './static/users.json';
+const url = 'http://localhost:3000/';
 
 button.onclick = () => {
     getUsersInfo(url);
@@ -12,8 +12,7 @@ async function getUsersInfo(url) {
     displayUsersInfo(users);
 }
 
-async function displayUsersInfo(data) {
-
+function displayUsersInfo(data) {
     data.forEach(user => {
         usersContainer.innerHTML += `
         <br/>
